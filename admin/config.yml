@@ -4,7 +4,7 @@ backend:
   branch: main # or master
 
 
-media_folder: "media" # Folder for images
+media_folder: "media"
 public_folder: "/media"
 
 collections:
@@ -19,3 +19,4 @@ collections:
       - { label: "Instructions", name: "instructions", widget: "markdown" }
       - { label: "Notes", name: "notes", widget: "markdown", required: false }
       - { label: "Does Not Belong", name: "wrong_ingredients", widget: "markdown", required: false }
+
