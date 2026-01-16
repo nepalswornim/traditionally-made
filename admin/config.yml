@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main # or master, depending on your repo
+
+media_folder: "media" # Folder for images
+public_folder: "/media"
+
+collections:
+  - name: "recipes"
+    label: "Recipes"
+    folder: "recipes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Ingredients", name: "ingredients", widget: "markdown" }
+      - { label: "Instructions", name: "instructions", widget: "markdown" }
+      - { label: "Notes", name: "notes", widget: "markdown", required: false }
+      - { label: "Does Not Belong", name: "wrong_ingredients", widget: "markdown", required: false }
