@@ -1,8 +1,7 @@
 backend:
   name: github
   repo: nepalswornim/traditionally-made
-  branch: main # or master
-
+  branch: main
 
 media_folder: "media"
 public_folder: "/media"
@@ -19,4 +18,3 @@ collections:
       - { label: "Instructions", name: "instructions", widget: "markdown" }
       - { label: "Notes", name: "notes", widget: "markdown", required: false }
       - { label: "Does Not Belong", name: "wrong_ingredients", widget: "markdown", required: false }
-
