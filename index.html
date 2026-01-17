@@ -1,144 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Traditionally Made — Food as it was intended</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap 5 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditionally Made</title>
+  
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
     }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
+
+    /* Hero Section */
     .hero {
-      background:
-        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-        url("/images/hero.jpg") center/cover no-repeat;
-      min-height: 85vh;
-      color: white;
+      background: url('hero.img') center/cover no-repeat;
+      height: 60vh;
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
-    .badge-authentic {
-      background-color: #b02a37;
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* Featured Recipe */
+    .featured {
+      padding: 4rem 0;
+    }
+
+    .featured img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .featured h2 {
+      font-weight: 600;
+      margin-top: 1rem;
+      color: #d35400;
+    }
+
+    .btn-primary {
+      background-color: #e67e22;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #cf6f17;
+    }
+
+    footer {
+      background-color: #f0e6dc;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Traditionally Made</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Why Authentic</a></li>
-      </ul>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Traditionally Made</h1>
+      <p>Food as it was intended.</p>
     </div>
-  </div>
-</nav>
+  </section>
 
-<!-- HERO -->
-<section class="hero text-center">
-  <div class="container">
-    <span class="badge badge-authentic px-3 py-2">AUTHENTIC RECIPES ONLY</span>
-    <h1 class="display-4 fw-bold mt-4">Food as it was intended</h1>
-    <p class="lead mt-3">
-      No shortcuts. No cream in carbonara.<br>
-      Just traditional recipes, preserved properly.
-    </p>
-    <a href="#" class="btn btn-light btn-lg mt-4">Explore Recipes</a>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Why Traditionally Made?</h2>
-      <p class="text-muted">Because culture deserves respect.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5>Historically Accurate</h5>
-            <p class="text-muted">
-              Recipes researched from their cultural and regional origins.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5>No Westernised Tweaks</h5>
-            <p class="text-muted">
-              If it wasn’t made that way originally, it’s not here.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5>Simple & Honest</h5>
-            <p class="text-muted">
-              Minimal ingredients. Maximum respect for tradition.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED -->
-<section class="bg-light py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Featured Classic</h2>
-    </div>
+  <!-- Featured Recipe -->
+  <section class="featured container">
     <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="/images/carbonara.jpg" class="img-fluid rounded shadow" alt="Carbonara">
+      <div class="col-md-6">
+        <img src="carbonara.img" alt="Guanciale Carbonara">
       </div>
       <div class="col-md-6">
-        <h3>Spaghetti alla Carbonara</h3>
-        <p class="text-muted">
-          Guanciale. Egg yolk. Pecorino Romano. Black pepper.<br>
-          Nothing else. Ever.
-        </p>
-        <a href="#" class="btn btn-dark mt-3">View Recipe</a>
+        <h2>Guanciale Carbonara</h2>
+        <p>Authentic Italian pasta with guanciale, pecorino, and egg — no cream, no shortcuts.</p>
+        <a href="#" class="btn btn-primary">See Recipe</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-light py-4">
-  <div class="container text-center">
-    <p class="mb-1">&copy; 2026 Traditionally Made</p>
-    <small class="text-muted">
-      Preserving food culture, one recipe at a time.
-    </small>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Traditionally Made | Bringing authenticity back to your kitchen</p>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
