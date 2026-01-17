@@ -44,6 +44,11 @@
       max-width: 100%;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .featured img:hover {
+      transform: scale(1.05);
     }
 
     .featured h2 {
@@ -52,18 +57,33 @@
       color: #d35400;
     }
 
+    /* Gradient Buttons */
     .btn-primary {
-      background-color: #e67e22;
+      background: linear-gradient(135deg, #f39c12, #e67e22);
       border: none;
+      transition: all 0.3s ease;
     }
 
     .btn-primary:hover {
-      background-color: #cf6f17;
+      background: linear-gradient(135deg, #e67e22, #cf6f17);
+      transform: scale(1.05);
     }
 
-    /* Recipes Grid */
+    /* Recipe Cards */
+    .card {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
     .card-title {
       color: #d35400;
+      font-weight: 600;
     }
 
     footer {
@@ -72,6 +92,13 @@
       padding: 2rem 1rem;
       margin-top: 4rem;
     }
+
+    h2.section-title {
+      color: #d35400;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
@@ -100,7 +127,7 @@
 
   <!-- Recipes Grid Section -->
   <section class="container my-5">
-    <h2 class="text-center mb-4">Our Recipes</h2>
+    <h2 class="section-title">Our Recipes</h2>
     <div class="row g-4">
 
       <!-- Recipe Card 1 -->
@@ -118,7 +145,7 @@
       <!-- Recipe Card 2 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/aglio.jpg" class="card-img-top" alt="Spaghetti Aglio e Olio">
+          <img src="images/hero.jpg" class="card-img-top" alt="Spaghetti Aglio e Olio">
           <div class="card-body">
             <h5 class="card-title">Spaghetti Aglio e Olio</h5>
             <p class="card-text">Classic Italian pasta with garlic, chili, and olive oil — simple and delicious.</p>
