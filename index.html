@@ -86,6 +86,14 @@
       font-weight: 600;
     }
 
+    /* Recipe Card Images Same Height */
+    .card-img-top {
+      height: 250px;       /* same height for all images */
+      object-fit: cover;   /* crop to fill nicely */
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
     footer {
       background-color: #f0e6dc;
       text-align: center;
@@ -157,10 +165,10 @@
       <!-- Recipe Card 3 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/fetu.jpg" class="card-img-top" alt="Your Next Recipe">
+          <img src="images/fetu.jpg" class="card-img-top" alt="Fettuccine">
           <div class="card-body">
-            <h5 class="card-title">Next Recipe</h5>
-            <p class="card-text">Coming soon — authentic and traditional flavors from around the world.</p>
+            <h5 class="card-title">Fettuccine</h5>
+            <p class="card-text">Creamy pasta with a rich traditional sauce, perfect for any dinner occasion.</p>
             <a href="#" class="btn btn-primary">See Recipe</a>
           </div>
         </div>
