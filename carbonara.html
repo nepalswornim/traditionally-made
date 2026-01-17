@@ -18,7 +18,7 @@
       color: #333;
     }
 
-    /* Hero */
+    /* HERO */
     .recipe-hero {
       background: url('images/carbonara.jpg') center/cover no-repeat;
       height: 55vh;
@@ -52,7 +52,7 @@
       border: none;
     }
 
-    /* Sections */
+    /* SECTIONS */
     .section {
       padding: 4rem 0;
     }
@@ -63,17 +63,26 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Ingredients */
+    /* INGREDIENTS */
     .ingredients li {
       padding: 0.4rem 0;
+      font-size: 1.05rem;
     }
 
-    /* Steps */
+    /* VIDEO */
+    .video-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* METHOD */
     .step {
       margin-bottom: 1.5rem;
     }
 
-    /* Warning box */
+    /* NOT AUTHENTIC */
     .not-authentic {
       background-color: #fff0e6;
       border-left: 5px solid #e67e22;
@@ -87,6 +96,15 @@
       padding: 2rem 1rem;
       margin-top: 4rem;
     }
+
+    a {
+      color: #d35400;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -96,29 +114,53 @@
     <div class="recipe-hero-content">
       <span class="badge badge-authentic px-3 py-2 mb-3 d-inline-block">AUTHENTIC RECIPE</span>
       <h1>Guanciale Carbonara</h1>
-      <p>Rome. Eggs. Pecorino. Guanciale. Nothing else.</p>
+      <p>Rome. Eggs. Pecorino. Guanciale.</p>
     </div>
   </section>
 
   <!-- INTRO -->
   <section class="section container">
     <p class="lead">
-      This is the **traditional Roman carbonara**, made the way it has always been.
+      This is the traditional Roman carbonara, prepared exactly as intended.
       No cream. No bacon. No garlic. No shortcuts.
     </p>
   </section>
 
-  <!-- INGREDIENTS -->
+  <!-- VIDEO + INGREDIENTS -->
   <section class="section container">
-    <h2>Ingredients (Serves 2)</h2>
-    <ul class="ingredients">
-      <li>200g spaghetti</li>
-      <li>100g guanciale (cured pork cheek)</li>
-      <li>2 large egg yolks + 1 whole egg</li>
-      <li>60g Pecorino Romano (finely grated)</li>
-      <li>Freshly cracked black pepper</li>
-      <li>Salt (for pasta water only)</li>
-    </ul>
+    <div class="row g-5 align-items-start">
+
+      <!-- VIDEO LEFT -->
+      <div class="col-md-5">
+        <div class="video-card">
+          <h2>Watch the Technique</h2>
+          <div class="ratio ratio-9x16">
+            <iframe
+              src="https://www.youtube.com/embed/RKu6COo8Pxs"
+              title="Authentic Carbonara Short"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="text-muted mt-3">
+            A short visual guide showing the correct texture and technique.
+          </p>
+        </div>
+      </div>
+
+      <!-- INGREDIENTS RIGHT -->
+      <div class="col-md-7">
+        <h2>Ingredients (Serves 2)</h2>
+        <ul class="ingredients">
+          <li>200g spaghetti</li>
+          <li>100g guanciale (cured pork cheek)</li>
+          <li>2 large egg yolks + 1 whole egg</li>
+          <li>60g Pecorino Romano (finely grated)</li>
+          <li>Freshly cracked black pepper</li>
+          <li>Salt (for pasta water only)</li>
+        </ul>
+      </div>
+
+    </div>
   </section>
 
   <!-- METHOD -->
@@ -128,8 +170,8 @@
     <div class="step">
       <strong>1. Render the guanciale</strong>
       <p>
-        Cut guanciale into thick batons. Cook gently in a cold pan until the fat renders
-        and the meat becomes crisp. Turn off heat and set aside.
+        Cut guanciale into thick batons. Start in a cold pan and cook gently until
+        the fat renders and the meat becomes crisp.
       </p>
     </div>
 
@@ -141,7 +183,7 @@
     </div>
 
     <div class="step">
-      <strong>3. Make the egg mixture</strong>
+      <strong>3. Prepare the egg mixture</strong>
       <p>
         Whisk egg yolks, whole egg, Pecorino Romano, and plenty of black pepper until smooth.
       </p>
@@ -150,8 +192,8 @@
     <div class="step">
       <strong>4. Combine off heat</strong>
       <p>
-        Add hot pasta to the guanciale pan. Remove from heat. Stir in egg mixture,
-        loosening with pasta water until glossy and creamy.
+        Add hot pasta to the guanciale pan. Remove from heat, then stir in egg mixture,
+        loosening with pasta water until glossy.
       </p>
     </div>
 
