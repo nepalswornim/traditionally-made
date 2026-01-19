@@ -51,6 +51,10 @@ body {
   background-position: center;
 }
 
+.hero {
+  background-image: url('images/hero.jpg'); /* homepage hero image */
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
