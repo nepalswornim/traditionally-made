@@ -52,7 +52,7 @@ body {
 }
 
 .hero {
-  background-image: url('images/hero.jpg'); /* homepage hero image */
+  background-image: url('images/hero.jpg');
 }
 
 .hero-overlay {
@@ -133,7 +133,7 @@ body {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 177%; /* 9:16 aspect for Shorts */
+  padding-top: 177%; /* vertical Shorts aspect for mobile stacking */
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
@@ -146,6 +146,19 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Fix for desktop side-by-side layout */
+@media (min-width: 992px) {
+  .video-wrapper {
+    padding-top: 0;
+    height: 100%;
+    min-height: 400px; /* optional minimum height */
+  }
+  .video-wrapper iframe {
+    position: relative;
+    height: 100%;
+  }
 }
 
 /* ===== HEADINGS ===== */
