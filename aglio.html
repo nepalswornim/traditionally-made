@@ -4,103 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spaghetti Aglio e Olio | Traditionally Made</title>
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff8f0;
-      color: #333;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      background-color: rgba(255, 248, 240, 0.95);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-    .navbar-brand {
-      font-weight: 700;
-      color: #d35400 !important;
-      letter-spacing: 0.5px;
-    }
-    .back-link {
-      color: #555;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .back-link:hover {
-      color: #d35400;
-    }
-
-    /* HERO */
-    .recipe-hero {
-      background: url('images/aglio.jpg') center/cover no-repeat;
-      height: 40vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-    .recipe-hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    /* VIDEO */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 177%; /* vertical Shorts aspect */
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-      background: #000;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    h2 {
-      color: #d35400;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    ul li, ol li {
-      margin-bottom: 0.5rem;
-      font-size: 1.05rem;
-    }
-
-    footer {
-      background-color: #f0e6dc;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #d35400;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Traditionally Made</a>
       <a class="back-link ms-auto" href="index.html">← Back to Home</a>
@@ -111,17 +21,17 @@
   <div style="height: 70px;"></div>
 
   <!-- HERO -->
-  <section class="recipe-hero">
+  <section class="recipe-hero" style="background-image: url('images/aglio.jpg');">
     <h1>Spaghetti Aglio e Olio</h1>
   </section>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <section class="container my-5">
     <div class="row g-5 align-items-start">
 
-      <!-- Video -->
+      <!-- VIDEO -->
       <div class="col-12 col-lg-4">
-        <h2>Watch How It's Done</h2>
+        <h2>Quick Visual</h2>
         <div class="video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/vJPDvxgWKx4"
@@ -132,7 +42,7 @@
         </div>
       </div>
 
-      <!-- Content -->
+      <!-- CONTENT -->
       <div class="col-12 col-lg-8">
         <h2>Ingredients (Serves 2)</h2>
         <ul>
