@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,10 +7,12 @@
   <title>Guanciale Carbonara | Traditionally Made</title>
 
   <!-- Bootstrap -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -18,28 +21,14 @@
       color: #333;
     }
 
-    /* HERO */
     .recipe-hero {
       background: url('images/carbonara.jpg') center/cover no-repeat;
-      height: 55vh;
-      position: relative;
+      height: 40vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: white;
-    }
-
-    .recipe-hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-    }
-
-    .recipe-hero-content {
-      position: relative;
-      z-index: 2;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     .recipe-hero h1 {
@@ -47,47 +36,30 @@
       font-weight: 700;
     }
 
-    .badge-authentic {
-      background: linear-gradient(135deg, #f39c12, #e67e22);
-      border: none;
+    .video-wrapper {
+      position: relative;
+      padding-top: 177%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
     }
 
-    /* SECTIONS */
-    .section {
-      padding: 4rem 0;
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     h2 {
       color: #d35400;
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    /* INGREDIENTS */
-    .ingredients li {
-      padding: 0.4rem 0;
-      font-size: 1.05rem;
-    }
-
-    /* VIDEO */
-    .video-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    /* METHOD */
-    .step {
-      margin-bottom: 1.5rem;
-    }
-
-    /* NOT AUTHENTIC */
-    .not-authentic {
-      background-color: #fff0e6;
-      border-left: 5px solid #e67e22;
-      padding: 1.5rem;
-      border-radius: 10px;
+    ul li {
+      margin-bottom: 0.5rem;
     }
 
     footer {
@@ -96,137 +68,73 @@
       padding: 2rem 1rem;
       margin-top: 4rem;
     }
-
-    a {
-      color: #d35400;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
+
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- Hero -->
+
   <section class="recipe-hero">
-    <div class="recipe-hero-content">
-      <span class="badge badge-authentic px-3 py-2 mb-3 d-inline-block">AUTHENTIC RECIPE</span>
-      <h1>Guanciale Carbonara</h1>
-      <p>Rome. Eggs. Pecorino. Guanciale.</p>
-    </div>
+    <h1>Guanciale Carbonara</h1>
   </section>
 
-  <!-- INTRO -->
-  <section class="section container">
-    <p class="lead">
-      This is the traditional Roman carbonara, prepared exactly as intended.
-      No cream. No bacon. No garlic. No shortcuts.
+  <!-- Content -->
+
+  <section class="container my-5">
+    <div class="row g-5">
+
+```
+  <!-- LEFT: YouTube Short -->
+  <div class="col-lg-4">
+    <h2>Quick Visual</h2>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/RKu6COo8Pxs"
+        title="Guanciale Carbonara Short"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- RIGHT: Recipe -->
+  <div class="col-lg-8">
+    <h2>Ingredients (Serves 2)</h2>
+    <ul>
+      <li>200g spaghetti</li>
+      <li>100g guanciale</li>
+      <li>2 large egg yolks + 1 whole egg</li>
+      <li>50g Pecorino Romano (finely grated)</li>
+      <li>Freshly cracked black pepper</li>
+      <li>Salt (for pasta water)</li>
+    </ul>
+
+    <h2 class="mt-4">Method</h2>
+    <ol>
+      <li>Bring a pot of salted water to boil and cook spaghetti until al dente.</li>
+      <li>Cut guanciale into strips and render slowly in a cold pan until crisp.</li>
+      <li>Whisk egg yolks, whole egg, pecorino, and lots of black pepper.</li>
+      <li>Reserve pasta water. Add pasta to guanciale pan (off heat).</li>
+      <li>Stir in egg mixture, loosening with pasta water until creamy.</li>
+      <li>Serve immediately with extra pecorino and pepper.</li>
+    </ol>
+
+    <p class="mt-3 fst-italic">
+      No cream. No garlic. No shortcuts.
     </p>
+  </div>
+
+</div>
+```
+
   </section>
 
-  <!-- VIDEO + INGREDIENTS -->
-  <section class="section container">
-    <div class="row g-5 align-items-start">
+  <!-- Footer -->
 
-      <!-- VIDEO LEFT -->
-      <div class="col-md-5">
-        <div class="video-card">
-          <h2>Watch the Technique</h2>
-          <div class="ratio ratio-9x16">
-            <iframe
-              src="https://www.youtube.com/embed/RKu6COo8Pxs"
-              title="Authentic Carbonara Short"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <p class="text-muted mt-3">
-            A short visual guide showing the correct texture and technique.
-          </p>
-        </div>
-      </div>
-
-      <!-- INGREDIENTS RIGHT -->
-      <div class="col-md-7">
-        <h2>Ingredients (Serves 2)</h2>
-        <ul class="ingredients">
-          <li>200g spaghetti</li>
-          <li>100g guanciale (cured pork cheek)</li>
-          <li>2 large egg yolks + 1 whole egg</li>
-          <li>60g Pecorino Romano (finely grated)</li>
-          <li>Freshly cracked black pepper</li>
-          <li>Salt (for pasta water only)</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- METHOD -->
-  <section class="section container">
-    <h2>Method</h2>
-
-    <div class="step">
-      <strong>1. Render the guanciale</strong>
-      <p>
-        Cut guanciale into thick batons. Start in a cold pan and cook gently until
-        the fat renders and the meat becomes crisp.
-      </p>
-    </div>
-
-    <div class="step">
-      <strong>2. Cook the pasta</strong>
-      <p>
-        Boil spaghetti in lightly salted water until al dente. Reserve one cup of pasta water.
-      </p>
-    </div>
-
-    <div class="step">
-      <strong>3. Prepare the egg mixture</strong>
-      <p>
-        Whisk egg yolks, whole egg, Pecorino Romano, and plenty of black pepper until smooth.
-      </p>
-    </div>
-
-    <div class="step">
-      <strong>4. Combine off heat</strong>
-      <p>
-        Add hot pasta to the guanciale pan. Remove from heat, then stir in egg mixture,
-        loosening with pasta water until glossy.
-      </p>
-    </div>
-
-    <div class="step">
-      <strong>5. Serve immediately</strong>
-      <p>
-        Finish with extra Pecorino and black pepper. Serve hot.
-      </p>
-    </div>
-  </section>
-
-  <!-- NOT AUTHENTIC -->
-  <section class="section container">
-    <div class="not-authentic">
-      <h2>What Is NOT Authentic</h2>
-      <ul>
-        <li>❌ Cream</li>
-        <li>❌ Bacon or pancetta</li>
-        <li>❌ Garlic or onion</li>
-        <li>❌ Parmesan</li>
-      </ul>
-      <p>
-        If it has cream, it is not carbonara.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Traditionally Made | Food as it was intended.</p>
-    <a href="index.html">← Back to home</a>
+    <p>&copy; 2026 Traditionally Made | Authentic food, no compromises</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
