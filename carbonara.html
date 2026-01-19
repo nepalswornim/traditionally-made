@@ -18,6 +18,29 @@
       color: #333;
     }
 
+    /* NAVBAR */
+    .navbar {
+      background-color: rgba(255, 248, 240, 0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #d35400 !important;
+      letter-spacing: 0.5px;
+    }
+
+    .back-link {
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      color: #d35400;
+    }
+
     /* HERO */
     .recipe-hero {
       background: url('images/carbonara.jpg') center/cover no-repeat;
@@ -59,7 +82,7 @@
       margin-bottom: 1rem;
     }
 
-    ul li {
+    ul li, ol li {
       margin-bottom: 0.5rem;
       font-size: 1.05rem;
     }
@@ -70,9 +93,30 @@
       padding: 2rem 1rem;
       margin-top: 4rem;
     }
+
+    footer a {
+      color: #d35400;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Traditionally Made</a>
+      <a class="back-link ms-auto" href="index.html">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- SPACER FOR FIXED NAV -->
+  <div style="height: 70px;"></div>
 
   <!-- HERO -->
   <section class="recipe-hero">
@@ -83,7 +127,7 @@
   <section class="container my-5">
     <div class="row g-5 align-items-start">
 
-      <!-- VIDEO: LEFT (desktop), TOP (mobile) -->
+      <!-- VIDEO -->
       <div class="col-12 col-lg-4">
         <h2>Quick Visual</h2>
         <div class="video-wrapper">
@@ -96,13 +140,13 @@
         </div>
       </div>
 
-      <!-- CONTENT: RIGHT -->
+      <!-- CONTENT -->
       <div class="col-12 col-lg-8">
         <h2>Ingredients (Serves 2)</h2>
         <ul>
           <li>200g spaghetti</li>
           <li>100g guanciale</li>
-          <li>2 large egg yolks + 1 whole egg</li>
+          <li>2 egg yolks + 1 whole egg</li>
           <li>50–60g Pecorino Romano (finely grated)</li>
           <li>Freshly cracked black pepper</li>
           <li>Salt (for pasta water only)</li>
