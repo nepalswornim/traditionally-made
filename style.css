@@ -1,3 +1,4 @@
+/* ========== GLOBAL RESET ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,48 +6,80 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #faf7f2;
-  color: #1b1b1b;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* HERO */
-.hero {
-  height: 70vh;
-  background-image: url("images/carbonara.jpg");
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: rgba(255, 248, 240, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #d35400 !important;
+  letter-spacing: 0.5px;
+}
+
+.back-link,
+.navbar a.text-decoration-none {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover,
+.navbar a.text-decoration-none:hover {
+  color: #d35400;
+}
+
+/* ========== HERO SECTION ========== */
+.hero,
+.recipe-hero {
+  height: 60vh;
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.65)
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
   );
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
+  text-align: center;
 }
 
-.hero h1 {
-  color: #fff;
+.hero h1,
+.recipe-hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  max-width: 700px;
 }
 
 .hero p {
   margin-top: 1rem;
-  color: #f1f1f1;
   font-size: 1.1rem;
-  max-width: 600px;
+  color: #f1f1f1;
 }
 
-/* RECIPES */
+/* ========== RECIPE GRID (HOMEPAGE) ========== */
 .recipes {
   padding: 4rem 1.5rem;
 }
@@ -54,16 +87,16 @@ body {
 .recipes h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #d35400;
+  text-align: center;
 }
 
-/* GRID */
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-/* CARD */
 .recipe-card {
   background: #fff;
   border-radius: 18px;
@@ -99,17 +132,71 @@ body {
   font-size: 0.95rem;
 }
 
-/* FOOTER */
-.site-footer {
+/* ========== RECIPE PAGE CONTENT ========== */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 177%; /* vertical Shorts aspect ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+h2 {
+  color: #d35400;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* ========== FOOTER ========== */
+.site-footer,
+footer {
+  background-color: #f0e6dc;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
   color: #777;
   font-size: 0.85rem;
 }
 
-/* MOBILE */
+footer a,
+.site-footer a {
+  color: #d35400;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 992px) {
+  .hero h1,
+  .recipe-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero h1,
+  .recipe-hero h1 {
+    font-size: 2rem;
   }
 }
